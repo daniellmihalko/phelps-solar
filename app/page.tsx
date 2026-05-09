@@ -107,7 +107,7 @@ function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <a href="tel:+16025551234" className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-bold text-white transition hover:bg-white/20">
+          <a href="tel:+16025551234" className="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-[#29316F] shadow-sm transition hover:bg-slate-50">
             <Phone className="h-4 w-4" />
             Call Now
           </a>
@@ -218,7 +218,15 @@ function HeroSection() {
   );
 }
 
-function SectionHeader({ eyebrow, title, body }) {
+function SectionHeader({
+  eyebrow,
+  title,
+  body,
+}: {
+  eyebrow: string;
+  title: string;
+  body?: string;
+}) {
   return (
     <div className="mx-auto mb-12 max-w-3xl text-center">
       <div className="mb-3 text-sm font-black uppercase tracking-[0.24em] text-[#E77C52]">{eyebrow}</div>
