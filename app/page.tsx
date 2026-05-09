@@ -242,8 +242,8 @@ function AboutSection() {
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="About Phelps Solar"
-          title="A modern site for a practical solar pool heating company."
-          body="This section introduces the owner, the company story, the service area, and the value of solar pool heating in a clear, trust-building way."
+          title="We Heat Pools"
+          body="Mark Naylor started business in 1979 in San Diego, CA. Mark Naylor Solar is San Diego’s oldest licensed solar heating contractor, specializing in energy saving solar pool heating systems. Since 1979 Mark has learned which systems will save you the most money through reliability, serviceability and extensive warranties. Mark Naylor Solar Specialist is the distributor and warranty service center for both Solar Industries brand swimming pool solar heating collectors and Sun Earth brand solar domestic hot water systems. In these two manufacturers, you, the consumer, receive the benefit of the largest and oldest AMERICAN companies in the industry."
         />
 
         <div className="grid gap-6 md:grid-cols-3">
