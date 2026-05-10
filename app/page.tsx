@@ -27,27 +27,30 @@ const slides = [
     title: "Swim Longer For Less Money!",
     body: "Having a heated pool will not only save you money compared to other pool heating methods, but a Solar Heated Pool will also double your swim season so you can enjoy your pool for nearly 9 months each year!",
     stat: "Lower operating cost",
+    image: "/images/img-5241_orig.jpg",
   },
   {
     eyebrow: "Experts In Solar Pool Heating",
     title: "Expertise You Can Trust",
     body: "We here at Phelps Solar are experts when it comes to Solar Pool Heating. Our technicians have the knowledge and the skills to set your pool up with a full pool heating system powered by solar!",
     stat: "Longer swim season",
+    image: "/images/medico-finished-house-for-web_orig.jpg",
   },
   {
     eyebrow: "Free Estimate",
     title: "Schedule a Free Estimate Today!",
     body: "Contact us today for more information on how you can get a FREE estimate, and start enjoying the many benefits of a solar heated pool!",
     stat: "Solar pool heating is affordable",
+    image: "/images/cover-sheet-reduced_orig.jpg",
   },
 ];
 
 const productPartners = [
   {
-    name: "Product Partner One",
-    tagline: "Premium solar pool heating panels",
+    name: "Solar Industries",
+    tagline: "Total Quality Management",
     description:
-      "Use this section to explain the first product line Phelps Solar installs. Highlight panel durability, warranty, efficiency, roof compatibility, and why this system is a strong fit for Arizona pools.",
+      "Solar Industries manufacters all collectors and system components under one roof at its 50,000 sq. ft. Lakewood, NJ headquarters.",
     bullets: ["Efficient solar collection", "Low-maintenance design", "Great for residential pools"],
   },
   {
@@ -200,16 +203,27 @@ function HeroSection() {
           <div className="absolute -bottom-8 -right-8 h-52 w-52 rounded-full bg-[#28A8DD]/40 blur-3xl" />
           <Card className="relative overflow-hidden rounded-[2rem] border-white/20 bg-white/12 shadow-2xl backdrop-blur-xl">
             <CardContent className="p-8">
-              <div className="aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-[#28A8DD] via-[#47AED5] to-[#29316F] p-6">
-                <div className="flex h-full flex-col justify-between rounded-[1.2rem] border border-white/25 bg-white/15 p-7 text-white backdrop-blur">
-                  <Sun className="h-16 w-16 text-[#EAC357]" />
-                  <div>
-                    <div className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-white/70">Featured Benefit</div>
-                    <div className="text-4xl font-black">{active.stat}</div>
-                    <p className="mt-4 text-white/78">Replace this visual card with pool photos, installation shots, or product images when assets are ready.</p>
-                  </div>
-                </div>
-              </div>
+              <div className="relative aspect-[5/4] overflow-hidden rounded-[1.5rem]">
+  <Image
+    src={active.image}
+    alt={active.stat}
+    fill
+    className="object-cover"
+    priority
+  />
+
+  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+
+  <div className="absolute bottom-0 left-0 p-6 text-white">
+    <div className="text-3xl font-black">
+      {active.stat}
+    </div>
+
+    <p className="mt-2 text-white/80">
+      Solar pool heating designed for Arizona homes.
+    </p>
+  </div>
+</div>
             </CardContent>
           </Card>
         </motion.div>
@@ -288,7 +302,13 @@ function ProductsSection() {
                     </div>
                     <div>
                       <div className="text-3xl font-black">{partner.name}</div>
-                      <p className="mt-2 text-white/75">Replace this with manufacturer imagery, diagrams, or install photos.</p>
+                       <Image
+    src="/images/costs.png"
+    alt="Solar heated pool"
+    fill
+    className="object-cover"
+    priority
+  />
                     </div>
                   </div>
                 </div>
